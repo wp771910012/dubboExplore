@@ -16,7 +16,45 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dubbo-api</module>
+        <module>dubbo-provider</module>
+        <module>dubbo-consumer</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- 开发web项目需要下面jar包 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerVersion>1.8</compilerVersion>
+                    <!--<compilerArguments>-->
+                    <!--&lt;!&ndash;在windows上使用分号隔开，而在linux上使用冒号隔开&ndash;&gt;-->
+                    <!--<bootclasspath>${java.home}/lib/rt.jar:${java.home}/lib/jce.jar</bootclasspath>-->
+                    <!--</compilerArguments>-->
+                </configuration>
+            </plugin>
+
+
+        </plugins>
+    </build>
 
 
 </project>
