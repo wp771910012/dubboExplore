@@ -1,5 +1,6 @@
-package serviceImpl;
+package com.wp.dubbo.provider.serviceImpl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.dubbo.rpc.RpcContext;
 import com.wp.dubbo.api.service.DemoService;
 
@@ -10,6 +11,7 @@ import java.util.Date;
  * @author wp
  * @date 2018-12-07 14:40
  **/
+@Service
 public class DemoServiceImpl implements DemoService{
 
     @Override
